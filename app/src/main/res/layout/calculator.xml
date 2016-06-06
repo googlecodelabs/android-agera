@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2016, The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:id="@+id/imageView"
+        android:background="@drawable/image"
+        android:layout_gravity="center" />
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp">
+
+        <RadioButton
+            android:text="@string/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonAdd"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:onClick="onRadioButtonClicked" />
+
+        <RadioButton
+            android:text="@string/subtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonSub"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:text="@string/multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonMult"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:text="@string/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButtonDiv"
+            android:layout_weight="1"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/value1"
+        android:paddingStart="@dimen/calculator_padding_seek_label" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/seekBar1"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/value2"
+        android:paddingStart="@dimen/calculator_padding_seek_label" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/seekBar2"
+        android:max="100" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textViewResult"
+            android:lines="1"
+            android:textAppearance="@android:style/TextAppearance.Material.Large"
+            android:elevation="2dp"
+            android:layout_margin="@dimen/calculator_result_margin" />
+    </LinearLayout>
+
+</LinearLayout>
