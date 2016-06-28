@@ -29,6 +29,7 @@ import android.support.test.espresso.UiController;
 import android.support.test.espresso.ViewAction;
 import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.filters.LargeTest;
+import android.support.test.filters.Suppress;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 import android.view.View;
@@ -40,11 +41,13 @@ import org.hamcrest.Matcher;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 
 
 @RunWith(AndroidJUnit4.class)
 @LargeTest
+@Suppress // Remove this line to enable
 public class Step4CalculatorActivityTest {
 
     private IdlingResource mIdlingResource;
@@ -73,14 +76,14 @@ public class Step4CalculatorActivityTest {
         }
     }
 
-    //@Test - enable this by uncommenting
+    @Test
     public void initial_shows_NA() {
         String notAvailableResource = mTasksActivityTestRule.getActivity()
                 .getResources().getString(R.string.not_available);
         onView(withId(R.id.textViewResult)).check(matches(withText(notAvailableResource)));
     }
 
-    //@Test - enable this by uncommenting
+    @Test
     public void calculator_add() throws InterruptedException {
         onView(withId(R.id.radioButtonAdd)).perform(click());
         onView(withId(R.id.seekBar1)).perform(setProgress(10));
@@ -88,7 +91,7 @@ public class Step4CalculatorActivityTest {
         onView(withId(R.id.textViewResult)).check(matches(withText("42")));
     }
 
-    //@Test - enable this by uncommenting
+    @Test
     public void divisionByZero() {
         String divZeroResource = mTasksActivityTestRule.getActivity()
                 .getResources().getString(R.string.div_zero);

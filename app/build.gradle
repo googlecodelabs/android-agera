@@ -16,20 +16,23 @@
 
 apply plugin: 'com.android.application'
 
-apply plugin: 'me.tatarka.retrolambda'
+// Jack is experimental, if you experience problems use retrolambda. Apply
+// this plugin to enable retrolambda and set android.jackOptions.enabled to `false`.
+//apply plugin: 'me.tatarka.retrolambda'
 
 android {
-    compileSdkVersion 'android-N'
-    buildToolsVersion "24.0.0 rc2"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
     defaultConfig {
         applicationId "com.example.android.codelabs.agera"
-        minSdkVersion 'N'
-        targetSdkVersion 'N'
+        minSdkVersion 21
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         jackOptions {
-            enabled false
+            // If you're using retrolambda you can disable Jack.
+            enabled true
         }
     }
     buildTypes {
@@ -46,25 +49,25 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:24.0.0-beta1'
+    compile 'com.android.support:appcompat-v7:24.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha1'
-    compile 'com.android.support:design:24.0.0-beta1'
+    compile 'com.android.support:design:24.0.0'
 
     // Agera deps
     compile 'com.google.android.agera:agera:1.1.0-beta2'
     testCompile 'com.google.android.agera:agera:1.1.0-beta2'
 
-    compile 'com.android.support:support-annotations:24.0.0-beta1'
-    testCompile 'com.android.support:support-annotations:24.0.0-beta1'
-    androidTestCompile 'com.android.support:support-annotations:24.0.0-beta1'
+    compile 'com.android.support:support-annotations:24.0.0'
+    testCompile 'com.android.support:support-annotations:24.0.0'
+    androidTestCompile 'com.android.support:support-annotations:24.0.0'
 
-    androidTestCompile 'com.android.support:appcompat-v7:24.0.0-beta1'
-    androidTestCompile 'com.android.support:design:24.0.0-beta1'
+    androidTestCompile 'com.android.support:appcompat-v7:24.0.0'
+    androidTestCompile 'com.android.support:design:24.0.0'
 
     testCompile 'junit:junit:4.12'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:2.2.2'
     androidTestCompile 'com.android.support.test.espresso:espresso-idling-resource:2.2.2'
     androidTestCompile 'com.android.support.test:runner:0.5'
-    androidTestCompile 'com.android.support:support-annotations:24.0.0-beta1'
+    androidTestCompile 'com.android.support:support-annotations:24.0.0'
 }
