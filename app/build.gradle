@@ -54,8 +54,8 @@ dependencies {
     compile 'com.android.support:design:24.0.0'
 
     // Agera deps
-    compile 'com.google.android.agera:agera:1.1.0-beta2'
-    testCompile 'com.google.android.agera:agera:1.1.0-beta2'
+    compile 'com.google.android.agera:agera:1.1.0'
+    testCompile 'com.google.android.agera:agera:1.1.0'
 
     compile 'com.android.support:support-annotations:24.0.0'
     testCompile 'com.android.support:support-annotations:24.0.0'
