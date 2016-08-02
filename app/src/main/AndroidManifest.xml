@@ -19,42 +19,42 @@
     <application
         android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
 
-        <activity android:name=".step1.Step1Activity">
+        <activity android:name=".step1.Step1Activity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step1.Step1ActivityFinal">
+        <activity android:name=".step1.Step1ActivityFinal" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step2.Step2Activity">
+        <activity android:name=".step2.Step2Activity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step2.Step2ActivityFinal">
+        <activity android:name=".step2.Step2ActivityFinal" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step3.CalculatorActivity">
+        <activity android:name=".step3.CalculatorActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step3.CalculatorActivityFinal">
+        <activity android:name=".step3.CalculatorActivityFinal" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step4.CalculatorActivity">
+        <activity android:name=".step4.CalculatorActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name=".step4.CalculatorActivityFinal">
+        <activity android:name=".step4.CalculatorActivityFinal" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Step 1 - Final" type="AndroidRunConfigurationType" factoryName="Android Application" activateToolWindowBeforeRun="false">
+  <configuration default="false" name="Step 1 - Final" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
     <module name="app" />
     <option name="DEPLOY" value="true" />
     <option name="ARTIFACT_NAME" value="" />
